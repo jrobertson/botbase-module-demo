@@ -30,7 +30,7 @@ class BotBaseModuleDemo
 
   end
 
-  def query(sender='user01', msg)
+  def query(sender='user01', msg, mode: :chat)
     r = @phrases.detect {|k,v|  msg =~ /#{k}/i }
 
     raw_msg = if r then
