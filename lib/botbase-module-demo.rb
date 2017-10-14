@@ -6,9 +6,9 @@
 
 class BotBaseModuleDemo
   
-  def initialize(x=nil)
+  def initialize(x=nil, phrases: {}, callback: nil)
     
-    @phrases = {}
+    @phrases = phrases
     service_modules = nil
     
     a = if service_modules then
