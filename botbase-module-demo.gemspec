@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'botbase-module-demo'
-  s.version = '0.1.3'
+  s.version = '0.1.4'
   s.summary = 'An experimental service module used by the botbase gem.'
   s.authors = ['James Robertson']
   s.files = Dir['lib/botbase-module-demo.rb']

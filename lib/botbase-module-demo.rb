@@ -6,9 +6,9 @@
 
 class BotBaseModuleDemo
   
-  def initialize(x=nil, phrases: {}, callback: nil)
+  def initialize(x=nil, phrases: {}, callback: nil, debug: false)
     
-    @phrases = phrases
+    @phrases, @debug = phrases, debug
     service_modules = nil
     
     a = if service_modules then
@@ -20,7 +20,9 @@ class BotBaseModuleDemo
       @h = {
           "^What's the time?" => "'The time is ' + Time.now.strftime(\"%-I:%M%p\")",
           "hello?" => %q("hello #{sender}, how can I help you?" % sender),
-          'unknown' => "\"I'm sorry, I don't understand what you said.\""
+          'unknown' => "\"I'm sorry, I don't understand what you said.\"",
+          'where are you?' => 
+              %q("I'm in [Edinburgh](https://en.wikipedia.org/wiki/Edinburgh)")
       }
       [@h]
 
